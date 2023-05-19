@@ -10,7 +10,7 @@ int main(void)
 {
 	char lower_case = 'a';
 
-	for(;lower_case <= 'z'; lower_case++)
+	for ( ; lower_case <= 'z'; lower_case++)
 	{
 		if ((lower_case == 'q') || (lower_case == 'e'))
 			continue;
