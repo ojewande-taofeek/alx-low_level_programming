@@ -10,12 +10,11 @@ int main(void)
 {
 	char lower_case = 'a';
 
-	while (lower_case <= 'z')
+	for(;lower_case <= 'z'; lower_case++)
 	{
 		if ((lower_case == 'q') || (lower_case == 'e'))
 			continue;
 		putchar(lower_case);
-		lower_case++;
 	}
 
 	putchar('\n');
