@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int a, b; 
+	int a, b;
 
-	for (a = 0; a < 10; a++)
+	for (a = 0; a < 9; a++)
 	{
 		for (b = 1; b < 10; b++)
 		{
@@ -18,7 +18,7 @@ int main(void)
 			{
 				putchar(a + '0');
 				putchar(b + '0');
-				if ((a < 9) && (b < 10))
+				if (a < 8)
 				{
 					putchar(',');
 					putchar(' ');
