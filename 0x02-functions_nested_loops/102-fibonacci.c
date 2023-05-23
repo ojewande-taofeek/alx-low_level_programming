@@ -9,7 +9,7 @@
 int main(void)
 {
 	long int first = 1, second = 2, third;
-       	int n;
+	int n;
 
 	printf("1, 2,");
 	for (n = 3; n <= 50; n++)
