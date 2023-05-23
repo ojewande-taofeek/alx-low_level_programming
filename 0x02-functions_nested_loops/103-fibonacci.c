@@ -10,7 +10,7 @@ int main(void)
 {
 	long int first = 1, second = 2, third, sum = 2;
 
-	for(; (third = first + second) <= 4000000;)
+	for (; (third = first + second) <= 4000000;)
 	{
 		if ((third % 2) == 0)
 			sum += third;
