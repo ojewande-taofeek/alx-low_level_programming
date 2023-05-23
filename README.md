@@ -18,25 +18,6 @@ For this project, we expect you to look at this concept:
 - puts
 - putchar
 
-# 0x01. C - Variables, if, else, while
-
-## Resources
-**Read or watch:**
-
-- Everything you need to know to start with C.pdf _(You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Variables assignments”, “Comparisons”, “Logical operators”, “if, if…else”, “while loops”.)_
-- Keywords and identifiers
-- integers
-- Arithmetic Operators in C
-- If statements in C
-- if…else statement
-- Relational operators
-- Logical operators
-- while loop in C
-- While loop
-
-**man or help:**
-
-- ascii (You do not need to learn about scanf, getc, getchar, EOF, EXIT_SUCCESS, time, rand, srand, RAND_MAX, for loops, do...while loops, functions.)
 
 
 # 0x01. C - Variables, if, else, while
@@ -60,3 +41,13 @@ For this project, we expect you to look at this concept:
 
 - ascii _(You do not need to learn about scanf, getc, getchar, EOF, EXIT_SUCCESS, time, rand, srand, RAND_MAX, for loops, do...while loops, functions.)_
 
+## 0x02. C - Functions, nested loops
+
+### Resources
+**Read or watch:**
+
+- Nested while loops
+- C - Functions
+- Learning to Program in C (Part 06) (stop at 14:00)
+- What is the purpose of a function prototype?
+- C - Header Files (stop before the “Once-Only Headers” paragraph)
