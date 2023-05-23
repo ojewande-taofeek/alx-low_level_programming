@@ -19,7 +19,12 @@ void print_to_98(int n)
 				_putchar('-');
 				a *= -1;
 			}
-			if (a >= 10)
+			if (a >= 100)
+			{
+				_putchar((a / 100) + '0');
+				_putchar(((a / 10) % 10) + '0');
+			}
+			else if (a >= 10 && a < 100)
 				_putchar((a / 10) + '0');
 			_putchar((a % 10) + '0');
 			_putchar(',');
