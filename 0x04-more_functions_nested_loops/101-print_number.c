@@ -8,7 +8,7 @@
 
 void print_number(int n)
 {
-	int div = 1;
+	int div = DIV_INIT;
 
 	if (n < 0)
 	{
