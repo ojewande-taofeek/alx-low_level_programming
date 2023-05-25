@@ -17,5 +17,7 @@ void print_number(int n);
 int _putchar(char c);
 
 #define DIV_INIT 1
+#define DIV_CHECK 10
+#define DIV_MIN 0
 
 #endif /* MAIN_H */

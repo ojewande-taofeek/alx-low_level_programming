@@ -15,9 +15,9 @@ void print_number(int n)
 		_putchar('-');
 		n *= -1;
 	}
-	while (n / div >= 10)
+	while (n / div >= DIV_CHECK)
 		div *= 10;
-	while (div != 0)
+	while (div != DIV_MIN)
 	{
 		_putchar((n / div) + '0');
 		n %= div;
