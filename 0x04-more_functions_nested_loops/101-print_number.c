@@ -13,11 +13,11 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		n = -n;
 	}
 	while (n / div >= DIV_CHECK)
 		div *= 10;
-	while (div != DIV_MIN)
+	while (div > DIV_MIN)
 	{
 		_putchar((n / div) + '0');
 		n %= div;
