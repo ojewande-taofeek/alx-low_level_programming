@@ -21,11 +21,8 @@ void print_diagonal(int n)
 			slash++;
 			if (slash == n)
 				break;
-			else
-			{
-				for (space = 0; space < slash; space++)
-					_putchar(' ');
-			}
+			for (space = 0; space < slash; space++)
+				_putchar(' ');
 		}
 	}
 }
