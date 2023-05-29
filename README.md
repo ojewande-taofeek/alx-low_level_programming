@@ -20,9 +20,9 @@ For this project, we expect you to look at this concept:
 
 
 
-# 0x01. C - Variables, if, else, while
+## 0x01. C - Variables, if, else, while
 
-## Resources
+### Resources
 
 **Read or watch:**
 
@@ -51,3 +51,32 @@ For this project, we expect you to look at this concept:
 - Learning to Program in C (Part 06) (stop at 14:00)
 - What is the purpose of a function prototype?
 - C - Header Files (stop before the “Once-Only Headers” paragraph)
+
+## 0x03. C - Debugging
+
+###Resources
+**Read or watch:**
+
+- Debugging
+- Rubber Duck Debugging
+
+## 0x04. C - More functions, more nested loops
+
+### Resources
+**Read or watch:**
+
+- Nested while loops
+- C - Functions
+- Learning to Program in C (Part 06) (stop at 14:00)
+- What is the purpose of a function prototype?
+- C - Header Files (stop before the “Once-Only Headers” paragraph)
+
+## 0x05. C - Pointers, arrays and strings
+
+### Resources
+**Read or watch:**
+
+- C - Arrays
+- C - Pointers
+- C - Strings
+- Memory Layout
