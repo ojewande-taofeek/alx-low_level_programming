@@ -13,8 +13,9 @@ void puts2(char *str)
 
 	while (str[idx])
 	{
-		_putchar(str[idx]);
-		idx +=2;
+		if (idx % 2 == 0)
+			_putchar(str[idx]);
+		idx++;
 	}
 	_putchar('\n');
 }
