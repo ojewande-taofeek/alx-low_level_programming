@@ -80,3 +80,13 @@ For this project, we expect you to look at this concept:
 - C - Pointers
 - C - Strings
 - Memory Layout
+
+## 0x06. C - More pointers, arrays and strings
+
+### Resources
+**Read or watch:**
+
+- C - Arrays
+- C - Pointers
+- C - Strings
+- Memory Layout
