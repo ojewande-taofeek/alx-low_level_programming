@@ -16,7 +16,7 @@ char *leet(char *str)
 		for (cidx = 0; cidx < n; cidx++)
 		{
 			check = code[cidx] - 32;
-			if ((code[cidx] >= 'a' && code[cidx] <= 'z') && 
+			if ((code[cidx] >= 'a' && code[cidx] <= 'z') &&
 				((str[idx] == code[cidx]) ||
 					(str[idx] == check)))
 				str[idx] = code[cidx + 1];
