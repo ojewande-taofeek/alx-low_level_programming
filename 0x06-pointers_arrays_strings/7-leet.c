@@ -8,20 +8,19 @@
 
 char *leet(char *str)
 {
-	int idx = 0;
+	char code[] = {'a', '4', 'e', '3', 'o', '0', 't', '7', 'l', '1'};
+	int idx = 0, cidx, n = sizeof(code) / sizeof(char), check;
 
 	for (; str[idx]; idx++)
 	{
-		if (str[idx] == 'a' || str[idx] == 'A')
-			str[idx] = '4';
-		if (str[idx] == 'e' || str[idx] == 'E')
-			str[idx] = '3';
-		if (str[idx] == 'o' || str[idx] == 'O')
-			str[idx] = '0';
-		if (str[idx] == 't' || str[idx] == 'T')
-			str[idx] = '7';
-		if (str[idx] == 'l' || str[idx] == 'L')
-			str[idx] = '1';
+		for (cidx = 0; cidx < n; cidx++)
+		{
+			check = code[cidx] - 32;
+			if ((code[cidx] >= 'a' && code[cidx] <= 'z') && 
+				((str[idx] == code[cidx]) ||
+					(str[idx] == check)))
+				str[idx] = code[cidx + 1];
+		}
 	}
 
 	return (str);
