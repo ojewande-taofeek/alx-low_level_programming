@@ -2,18 +2,15 @@
 
 /**
  * _strlen - The function returns the length of a string
- * @s: The pointer to a string constant
- * Return: length of string
+ * @s: The pointer of the formal paramter of string constant
+ * Return: the lenght of the string constant
  */
 
 int _strlen(char *s)
 {
 	int len = 0;
 
-	while (*s)
-	{
-		len++;
-		s++;
-	}
+	for (; *s; s++, len++)
+		;
 	return (len);
 }
