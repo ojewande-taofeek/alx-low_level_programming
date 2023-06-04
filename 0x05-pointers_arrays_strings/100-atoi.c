@@ -27,6 +27,11 @@ int _atoi(char *s)
 			break;
 		idx++;
 	}
-	numb = sign * numb;
-	return (numb);
+	if (numb >= 0)
+	{
+		numb = sign * numb;
+		return (numb);
+	}
+	else
+		return (0);
 }
