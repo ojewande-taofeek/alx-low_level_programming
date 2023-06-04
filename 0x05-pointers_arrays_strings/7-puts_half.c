@@ -1,22 +1,19 @@
 #include "main.h"
 
 /**
- * puts_half - The function prints half of a string followed by a new line
- * @str: The pointer to a string constant
+ * puts_half - The function prints half of a string, followed by a new line.
+ * @str: The string contant pointer
  * Return: Nothing
  */
 
 void puts_half(char *str)
 {
-	int half, len = 0;
+	int idx, len, half;
 
-	for ( ; str[len]; len++)
+	for (len = 0; str[len]; len++)
 		;
-	if (len % 2 != 0)
-		half = (len - 1) / 2;
-	else
-		half = len / 2;
-	for (; half < len; half++)
-		_putchar(str[half]);
+	half = len / 2;
+	for (idx = half; idx < len; idx++)
+		_putchar(str[idx]);
 	_putchar('\n');
 }
