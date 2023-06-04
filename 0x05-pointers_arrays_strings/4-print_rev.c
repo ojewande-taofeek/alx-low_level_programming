@@ -2,21 +2,18 @@
 
 /**
  * print_rev - The function prints a string, in reverse, followed by a new line
- * @s: The pointer to a string constant
+ * @s: The string constant pointer
  * Return: Nothing
  */
 
 void print_rev(char *s)
 {
-	int len = 0;
+	int len;
 
-	for (; s[len]; len++)
+	for (len = 0; s[len]; len++)
 		;
 	len--;
-	while (len >= 0)
-	{
+	for (; len >= 0; len--)
 		_putchar(s[len]);
-		len--;
-	}
 	_putchar('\n');
 }
