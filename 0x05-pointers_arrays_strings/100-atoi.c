@@ -10,10 +10,14 @@ int _atoi(char *s)
 {
 	int idx = 0, sign = 1, tens = 1, numb, new_numb;
 
-	while (s[idx])
+	for (; s[idx]; idx++)
 	{
 		if (s[idx] == '-')
 			sign = -sign;
+		else if ((s[idx - 1] >= '0' && s[idx - 1] <= '9') && s[idx] == ' ')
+			break;
+		else if (!(s[idx] >= '0' && s[idx] <= '9'))
+			continue;
 		else if (s[idx] >= '0' && s[idx] <= '9')
 		{
 			new_numb = s[idx] - '0';
@@ -23,9 +27,6 @@ int _atoi(char *s)
 				numb = (numb * tens) + new_numb;
 		       tens = 10;
 		}
-		else if ((s[idx - 1] >= '0' && s[idx - 1] <= '9') && s[idx] == ' ')
-			break;
-		idx++;
 	}
 	if (numb >= 0)
 	{
