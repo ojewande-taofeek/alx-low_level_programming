@@ -18,5 +18,10 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		idx++;
 		dest++;
 	}
+	for (; idx < n; idx++)
+	{
+		*dest = '\0';
+		dest++;
+	}
 	return (dest);
 }
