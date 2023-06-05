@@ -13,9 +13,9 @@ unsigned int _strspn(char *s, char *accept)
 	int len = 0;
 	char *ptr = s;
 
-	while (*accept)
+	while (1)
 	{
-		while (*s)
+		while (1)
 		{
 			if (*accept == *s)
 			{
@@ -25,8 +25,8 @@ unsigned int _strspn(char *s, char *accept)
 			s++;
 		}
 		s = ptr;
+		if (*accept == '\0')
+			return (len);
 		accept++;
 	}
-	len++;
-	return (len);
 }
