@@ -5,7 +5,7 @@
  * @dest: The steing constant to copy to
  * @src: The steing constant to copy from
  * @n: The number of bytes constant to copy from src
- * Return: The destination steing constant
+ * Return: The destination string constant
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
