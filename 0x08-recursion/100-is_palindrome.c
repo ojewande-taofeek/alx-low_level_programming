@@ -47,13 +47,11 @@ int find_palindrome(char *s, int len, int idx)
  * _strlen - Funtion that returns the length of a string constant
  * @s: The string constant
  * Return: len
- *
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	for (; s[len]; len++)
-		;
-	return (len);
-}*/
+ * int _strlen(char *s)
+ * {
+ * int len = 0;
+ * for (; s[len]; len++)
+ * ;
+ * return (len);
+ * }
+*/
