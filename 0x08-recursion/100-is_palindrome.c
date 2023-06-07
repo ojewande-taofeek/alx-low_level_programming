@@ -1,6 +1,7 @@
 #include "main.h"
+#include <string.h>
 
-int _strlen(char *s);
+/* int _strlen(char *s); */
 int find_palindrome(char *s, int len, int idx);
 
 /**
@@ -14,7 +15,7 @@ int find_palindrome(char *s, int len, int idx);
 
 int is_palindrome(char *s)
 {
-	int len = _strlen(s), idx = 0;
+	int len = strlen(s), idx = 0;
 
 	if (len == 0)
 		return (1);
@@ -33,7 +34,7 @@ int is_palindrome(char *s)
 
 int find_palindrome(char *s, int len, int idx)
 {
-	int half = (_strlen(s)) / 2;
+	int half = (strlen(s)) / 2;
 
 	if (s[idx] != s[len])
 		return (0);
@@ -46,7 +47,7 @@ int find_palindrome(char *s, int len, int idx)
  * _strlen - Funtion that returns the length of a string constant
  * @s: The string constant
  * Return: len
- */
+ *
 
 int _strlen(char *s)
 {
@@ -55,4 +56,4 @@ int _strlen(char *s)
 	for (; s[len]; len++)
 		;
 	return (len);
-}
+}*/
