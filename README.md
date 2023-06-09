@@ -90,3 +90,30 @@ For this project, we expect you to look at this concept:
 - C - Pointers
 - C - Strings
 - Memory Layout
+
+
+## 0x08. C - Recursion
+
+### Resources
+**Read or watch:**
+
+### 0x08. Recursion, introduction
+- What on Earth is Recursion?
+- C - Recursion
+- C Programming Tutorial 85, Recursion pt.1
+- C Programming Tutorial 86, Recursion pt.2
+
+## 0x09-static_libraries
+
+### Resources
+**Read or watch:**
+
+- What Is A “C” Library? What Is It Good For?
+- Creating A Static “C” Library Using “ar” and “ranlib”
+- Using A “C” Library In A Program
+- What is difference between Dynamic and Static library(Static and Dynamic linking) (stop at 4:44)
+**man or help:**
+
+- ar
+- ranlib
+- nm
