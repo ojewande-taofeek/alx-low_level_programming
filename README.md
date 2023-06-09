@@ -117,3 +117,13 @@ For this project, we expect you to look at this concept:
 - ar
 - ranlib
 - nm
+
+## 0x0A-argc_argv
+
+### Resources
+**Read or watch:**
+
+- Arguments to main
+- argc and argv
+- What does argc and argv mean?
+- how to compile with unused variables
