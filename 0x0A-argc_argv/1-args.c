@@ -3,7 +3,7 @@
 /**
  * main - The program prints the number of arguments passed into it
  *         followed by a new line
- * @argc: The argument count of type int
+ * @argc: The argument count
  * @argv: The argument vector that points to an array of strings
  * Return: EXIT_SUCCESS, if successful
  */
