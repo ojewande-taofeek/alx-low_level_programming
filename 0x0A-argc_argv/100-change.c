@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, qtrs = 0, dime = 0, cent_6 = 0, nick = 0, pennyny = 0;
+	int cents, qtrs = 0, dime = 0, cent_6 = 0, nick = 0, penny = 0, div;
 
 	if (argc != 2)
 	{
@@ -21,10 +21,11 @@ int main(int argc, char *argv[])
 	else
 	{
 		cents = atoi(argv[1]);
-		if (cents >= 25 && cents <= 999)
+		while (cents >= 25)
 		{
-			qtrs = (cents / 25);
-			cents -= (qtrs * 25);
+			div = (cents / 25);
+			qtrs += div;
+			cents -= (div * 25);
 		}
 		if ((cents % 6 == 0) || cents == 19)
 		{
@@ -44,8 +45,8 @@ int main(int argc, char *argv[])
 		if (cents == 5)
 			nick = cents / 5;
 		if (cents > 0 && cents < 5)
-			pennyny = cents;
+			penny = cents;
 	}
-	printf("%d\n", qtrs + dime + cent_6 + nick + pennyny);
+	printf("%d\n", qtrs + dime + cent_6 + nick + penny);
 	return (EXIT_SUCCESS);
 }
