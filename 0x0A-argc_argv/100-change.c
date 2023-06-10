@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, qtrs = 0, dime = 0, cent_6 = 0, nick = 0, penny = 0, div;
+	int cents, qtrs = 0, dime = 0, cent_2 = 0, nick = 0, penny = 0, div;
 
 	if (argc != 2)
 	{
@@ -27,26 +27,24 @@ int main(int argc, char *argv[])
 			qtrs += div;
 			cents -= (div * 25);
 		}
-		if ((cents % 6 == 0) || cents == 19)
+		if (cents >= 10 && cents < 25)
 		{
-			cent_6 = cents / 6;
-			cents -= (cent_6 * 6);
-		}
-		if (((cents >= 15 && cents < 24) && (cents != 19)) || cents == 10)
-		{
-			dime = (cents / 10);
+			dime = cents / 10;
 			cents -= (dime * 10);
 		}
-		if ((cents > 5 && cents < 15) && (cents != 10))
+		if (cents >= 5 && cents < 10)
 		{
-			cent_6 = (cents / 6);
-			cents -= (cent_6 * 6);
+			nick = (cents / 5);
+			cents -= (nick * 5);
 		}
-		if (cents == 5)
-			nick = cents / 5;
-		if (cents > 0 && cents < 5)
+		if (cents >= 2 && cents < 5)
+		{
+			cent_2 = (cents / 2);
+			cents -= (cent_2 * 2);
+		}
+		if (cents == 1)
 			penny = cents;
 	}
-	printf("%d\n", qtrs + dime + cent_6 + nick + penny);
+	printf("%d\n", qtrs + dime + cent_2 + nick + penny);
 	return (EXIT_SUCCESS);
 }
