@@ -20,6 +20,12 @@ struct dog
 	char *owner;
 };
 
+/**
+ * dog_t - The new name of the struct dog data type
+ * Desciption: This is used to illustrate the application of typedef
+ */
+typedef struct dog dog_t;
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 
