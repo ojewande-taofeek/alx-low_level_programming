@@ -8,10 +8,7 @@
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
-	{
-		d = malloc(sizeof(struct dog));
 		exit(0);
-	}
 	if (d->name == NULL)
 		printf("Name: (nil)\n");
 	else
