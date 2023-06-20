@@ -2,7 +2,7 @@
 
 /**
  * print_dog - The function prints a struct dog
- * @d: The variable of type struct dog
+ * @d: The pointer to the struct dog (data type) variable
  */
 
 void print_dog(struct dog *d)
