@@ -23,8 +23,7 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 	if (*operator == '+' || *operator == '-' || *operator == '*' ||
-			*operator == '/' || *operator == '%' ||
-			get_op_func(operator) != NULL)
+			*operator == '/' || *operator == '%')
 		;
 	else
 		{
