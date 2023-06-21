@@ -182,3 +182,14 @@ For this project, we expect you to look at this concept:
 - typedef
 - **Programming in C** by Stephen Kochan - _Chapter 8, Working with Structures p163-189_
 - The Lost Art of C Structure Packing _(Advanced - not mandatory)_
+
+## 0x0F. C - Function pointers
+
+### Resources
+**Read or watch:**
+
+- Function Pointer in C
+- Pointers to functions
+- Function Pointers in C / C++
+- why pointers to functions?
+- Everything you need to know about pointers in C
