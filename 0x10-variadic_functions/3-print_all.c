@@ -16,32 +16,35 @@ void print_all(const char * const format, ...)
 	char *str, *delimiter = "";
 
 	va_start(all_args, format);
-	while (format[idx])
+	if (format)
 	{
-		switch (format[idx])
+		while (format[idx])
 		{
-			case 'c':
-				printf("%s%c", delimiter, va_arg(all_args, int));
-						break;
-			case 'i':
-				printf("%s%i", delimiter, va_arg(all_args, int));
-						break;
-			case 'f':
-				printf("%s%f", delimiter, va_arg(all_args, double));
-						break;
-			case 's':
-				str = va_arg(all_args, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s%s", delimiter, str);
-				break;
-			default:
+			switch (format[idx])
+			{
+				case 'c':
+					printf("%s%c", delimiter, va_arg(all_args, int));
+							break;
+				case 'i':
+					printf("%s%i", delimiter, va_arg(all_args, int));
+							break;
+				case 'f':
+					printf("%s%f", delimiter, va_arg(all_args, double));
+							break;
+				case 's':
+					str = va_arg(all_args, char *);
+					if (str == NULL)
+						str = "(nil)";
+					printf("%s%s", delimiter, str);
+					break;
+				default:
+				idx++;
+				continue;
+			}
+			delimiter = ", ";
 			idx++;
-			continue;
 		}
-		delimiter = ", ";
-		idx++;
+		printf("\n");
+		va_end(all_args);
 	}
-	printf("\n");
-	va_end(all_args);
 }
