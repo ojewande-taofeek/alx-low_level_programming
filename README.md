@@ -193,3 +193,15 @@ For this project, we expect you to look at this concept:
 - Function Pointers in C / C++
 - why pointers to functions?
 - Everything you need to know about pointers in C
+
+## 0x10. C - Variadic functions
+
+### Resources
+**Read or watch:**
+
+- stdarg.h
+- Variadic Functions
+- Const Keyword
+**man or help:**
+
+- stdarg
