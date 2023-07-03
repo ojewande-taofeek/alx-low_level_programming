@@ -205,3 +205,17 @@ For this project, we expect you to look at this concept:
 **man or help:**
 
 - stdarg
+
+## 0x12. C - Singly linked lists
+
+### Concepts
+_For this project, we expect you to look at this concept:_
+
+- Data Structures
+
+### Resources
+*Read or watch:*
+
+- Linked Lists
+- Google
+- Youtube
