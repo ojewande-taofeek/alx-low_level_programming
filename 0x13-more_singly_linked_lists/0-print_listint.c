@@ -12,9 +12,9 @@ size_t print_listint(const listint_t *h)
 	const listint_t *ptr = malloc(sizeof(listint_t));
 
 	if (ptr == NULL)
-		return (-1);
+		return (NULL);
 	if (h == NULL)
-		return (-1);
+		return (NULL);
 
 	ptr = h;
 	while (ptr != NULL)
