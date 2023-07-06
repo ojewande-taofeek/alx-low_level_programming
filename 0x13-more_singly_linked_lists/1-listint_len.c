@@ -10,10 +10,8 @@
 size_t listint_len(const listint_t *h)
 {
 	size_t counter = 0;
-	const listint_t *ptr = malloc(sizeof(listint_t));
+	const listint_t *ptr;
 
-	if (ptr == NULL)
-		return (-1);
 	if (h == NULL)
 		return (0);
 
