@@ -39,7 +39,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		counter++;
 		t_ptr = t_ptr->next;
 	}
-	if (t_ptr != NULL && counter == idx)
+	if (counter == idx)
 	{
 		n_node->next = t_ptr;
 		tmp_ptr->next = n_node;
