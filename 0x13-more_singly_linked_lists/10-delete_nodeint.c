@@ -31,13 +31,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		t_ptr = t_ptr->next;
 		counter++;
 	}
-	if (counter == index)
+	if (t_ptr != NULL && counter == index)
 	{
 		tmp_ptr->next = t_ptr->next;
 		free(t_ptr);
 		return (1);
 	}
-	free(tmp_ptr);
-	free(t_ptr);
 	return (-1);
 }
