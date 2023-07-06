@@ -10,7 +10,7 @@
 size_t print_list(const list_t *h)
 {
 	size_t counter = 0;
-	const list_t *ptr = malloc(sizeof(list_t));
+	const list_t *ptr;
 
 	if (h == NULL)
 		return (0);
