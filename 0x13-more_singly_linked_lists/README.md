@@ -1,4 +1,4 @@
-# 0x12. C - Singly linked lists
+# 0x13. C - More Singly linked lists
 
 ## Concepts
 _For this project, we expect you to look at this concept:_
