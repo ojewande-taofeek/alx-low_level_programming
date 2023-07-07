@@ -26,10 +26,8 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		idx++;
 	}
-	if (num == 0)
-		return (0);
 	idx = 0;
-	while (num != 0)
+	while (num)
 	{
 		bit = num % 10;
 		base10 += bit << idx;
