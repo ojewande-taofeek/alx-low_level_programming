@@ -11,27 +11,16 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int idx = 0, converter, num = 0, bit, base10 = 0;
+	unsigned int idx = 0, base10 = 0;
 
 	if (!b)
 		return (0);
 	while (b[idx])
 	{
 		if (b[idx] == '1' || b[idx] == '0')
-		{
-			converter = b[idx] - '0';
-			num = (num * 10) + converter;
-		}
+			base10 = (base10 * 2) + (b[idx] - '0');
 		else
 			return (0);
-		idx++;
-	}
-	idx = 0;
-	while (num)
-	{
-		bit = num % 10;
-		base10 += bit << idx;
-		num /= 10;
 		idx++;
 	}
 	return (base10);
