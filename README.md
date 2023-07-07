@@ -219,3 +219,25 @@ _For this project, we expect you to look at this concept:_
 - Linked Lists
 - Google
 - Youtube
+
+## 0x13. C - More Singly linked lists
+
+### Concepts
+_For this project, we expect you to look at this concept:_
+
+- Data Structures
+
+### Resources
+*Read or watch:*
+
+- Linked Lists
+- Google
+- Youtube
+
+## 0x14. C - Bit manipulation
+
+### Resources
+**Read or watch:**
+
+- Google
+- Youtube
