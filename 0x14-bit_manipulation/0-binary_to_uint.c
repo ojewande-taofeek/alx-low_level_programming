@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	while (b[idx])
 	{
 		if (b[idx] == '1' || b[idx] == '0')
-			base10 = (base10 * 2) + (b[idx] - '0');
+			base10 = (base10 << 1) + (b[idx] - '0');
 		else
 			return (0);
 		idx++;
