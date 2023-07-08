@@ -9,17 +9,25 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int bit;
+	unsigned int mask, idx;
+	int l_zeros = 1;
 
-	bit = n & 1;
-	n >>= 1;
+	mask = 1 << 31;
+
 	if (n == 0)
 	{
-		_putchar(bit + '0');
+		_putchar('0');
 		return;
 	}
-
-	print_binary(n);
-	_putchar(bit + '0');
-
+	for (idx = 0; idx < 32; idx++)
+	{
+		if (n & mask)
+		{
+			l_zeros = 0;
+			_putchar('1');
+		}
+		else if (!l_zeros)
+			_putchar('0');
+		n <<= 1;
+	}
 }
