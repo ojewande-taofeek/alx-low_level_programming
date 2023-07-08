@@ -9,17 +9,17 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int mask, idx;
+	unsigned long int mask, idx;
 	int l_zeros = 1;
 
-	mask = 1 << 31;
+	mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	for (idx = 0; idx < 32; idx++)
+	for (idx = 0; idx < (sizeof(unsigned long int) * 8); idx++)
 	{
 		if (n & mask)
 		{
