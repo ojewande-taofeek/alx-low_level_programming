@@ -10,17 +10,15 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int rem, i = 0;
+	unsigned long int mask = 1UL << index;
 
-	if (n == 0 && index == 0)
-		return (0);
-	while ((n != 0) && (i <= index))
+	if (n)
 	{
-		rem = n & 1;
-		n >>= 1;
-		if (i == index)
-			return (rem);
-		i++;
+		if (n & mask)
+			return (1);
+		else
+			return (0);
 	}
-	return (-1);
+	else
+		return (-1);
 }
