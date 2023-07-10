@@ -12,26 +12,21 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, r_byte, w_byte, counter;
+	ssize_t fd, r_byte, w_byte;
 	char *str;
-	FILE *fptr;
 
 	fd = open(filename, O_RDWR);
-	fptr = fopen(filename, "r");
 
-	if ((filename == NULL) | (fd < 0) | (fptr == NULL))
+	if ((filename == NULL) || (fd < 0))
 		return (0);
-	while (fgetc(fptr) != EOF)
-		counter++;
-	str = malloc(counter * sizeof(char));
+	str = malloc((letters) * sizeof(char));
 	if (str == NULL)
 		return (0);
 	r_byte = read(fd, str, letters);
-	str[r_byte] = '\0';
-	w_byte = write(STDOUT_FILENO, str, r_byte);
-	if ((w_byte < 0) | (w_byte != r_byte))
+	w_byte = write(STDOUT_FILENO, str, letters);
+	if (w_byte < 0)
 		return (0);
 	free(str);
 	close(fd);
-	return (w_byte);
+	return (r_byte);
 }
