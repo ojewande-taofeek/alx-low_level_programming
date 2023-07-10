@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (str == NULL)
 		return (0);
 	r_byte = read(fd, str, letters);
-	w_byte = write(STDOUT_FILENO, str, letters);
+	w_byte = write(STDOUT_FILENO, str, r_byte);
 	if (w_byte < 0)
 		return (0);
 	free(str);
