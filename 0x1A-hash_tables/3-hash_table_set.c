@@ -47,7 +47,7 @@ hash_node_t *create_element(const char *key, const char *value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *element, *current_element;
+	hash_node_t *element, *current;
 	unsigned long int index;
 
 	element = create_element(key, value);
@@ -55,17 +55,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
-	current_element = ht->array[index];
-	if (current_element == NULL)
+	printf("%ld\n", index);
+	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = element;
 		return (1);
 	}
-	if (strcmp(current_element->key, key) == 0)
+	if (strcmp(ht->array[index]->key, element->key) == 0)
 	{
 		strcpy(ht->array[index]->value, value);
 		return (1);
 	}
-	element->next = current_element;
+	current = ht->array[index];
+	ht->array[index] = element;
+	element->next = current;
 	return (1);
 }
