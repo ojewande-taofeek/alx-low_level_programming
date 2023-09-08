@@ -60,10 +60,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = element;
 		return (1);
 	}
-	if (strcmp(ht->array[index]->key, element->key) == 0)
+	current = ht->array[index];
+	while (current)
 	{
-		strcpy(ht->array[index]->value, value);
-		return (1);
+		if (strcmp(current->key, element->key) == 0)
+		{
+			strcpy(current->value, element->value);
+			return (1);
+		}
+		current = current->next;
 	}
 	current = ht->array[index];
 	ht->array[index] = element;
