@@ -11,6 +11,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long idx, count = 0;
 	hash_node_t *current;
 
+	if (ht == NULL)
+		return;
+
 	for (idx = 0; idx < ht->size; idx++)
 	{
 		current = ht->array[idx];
