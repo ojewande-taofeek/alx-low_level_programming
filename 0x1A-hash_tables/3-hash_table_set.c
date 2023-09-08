@@ -22,12 +22,25 @@ hash_node_t *create_element(const char *key, const char *value)
 		free(element);
 		return (NULL);
 	}
-	element->value = strdup(value);
-	if (element->value == NULL)
+	if (value == NULL)
 	{
-		free(element->key);
-		free(element);
-		return (NULL);
+		element->value = strdup("");
+		if (element->value == NULL)
+		{
+			free(element->key);
+			free(element);
+			return (NULL);
+		}
+	}
+	else
+	{
+		element->value = strdup(value);
+		if (element->value == NULL)
+		{
+			free(element->key);
+			free(element);
+			return (NULL);
+		}
 	}
 	element->next = NULL;
 	return (element);
@@ -47,10 +60,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *element, *current;
 	unsigned long int index;
 
-	if (key == NULL)
+	if (key == NULL || ht == NULL)
 		return (0);
-	if (value == NULL)
-		value = "";
 	element = create_element(key, value);
 	if (element == NULL)
 		return (0);
@@ -64,9 +75,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	current = ht->array[index];
 	while (current)
 	{
-		if (strcmp(current->key, element->key) == 0)
+		if (strcmp(current->key, key) == 0)
 		{
-			strcpy(current->value, element->value);
+			free(current->value);
+			current->value = strdup(element->value);
+			free(element->key);
+			free(element->value);
+			free(element);
+			if (current->value == NULL)
+				return (0);
 			return (1);
 		}
 		current = current->next;
