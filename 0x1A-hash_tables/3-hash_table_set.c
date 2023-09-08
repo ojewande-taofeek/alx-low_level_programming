@@ -47,8 +47,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *element, *current;
 	unsigned long int index;
 
-	if (key == NULL || value == NULL)
+	if (key == NULL)
 		return (0);
+	if (value == NULL)
+		value = "";
 	element = create_element(key, value);
 	if (element == NULL)
 		return (0);
