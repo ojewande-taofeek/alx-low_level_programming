@@ -17,7 +17,7 @@ OBJ = ${SRC:.c=.o}
 NAME = school
 all: ${OBJ}
 	${CC} -o ${NAME} ${OBJ}
-${OBJ}: m.h
+#${OBJ}: m.h
 .PHONY: clean oclean fclean re
 clean:
 	${RE} -f *~ ${NAME}
