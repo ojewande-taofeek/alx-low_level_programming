@@ -11,5 +11,4 @@ NAME=school
 all: ${NAME}
 ${NAME}: ${OBJ}
 	${CC} -o ${NAME} ${OBJ}
-main.o: m.h
-school.o: m.h
+${OBJ}: m.h
