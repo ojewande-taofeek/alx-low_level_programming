@@ -10,11 +10,11 @@
 # oclean: deletes the object files
 # fclean: deletes all Emacs and Vim temporary files, the executable, and the object files
 # re: forces recompilation of all source files
-RE = rm 
 CC = gcc
 SRC = main.c school.c
 OBJ = ${SRC:.c=.o}
 NAME = school
+RE = rm 
 all: ${OBJ}
 	${CC} -o ${NAME} ${OBJ}
 #${OBJ}: m.h
