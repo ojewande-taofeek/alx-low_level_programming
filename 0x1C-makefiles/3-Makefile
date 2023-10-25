@@ -1,0 +1,27 @@
+# use of variables or macros
+# variables:
+# CC for compiler
+# SRC for C source files
+# OBJ for object files
+# NAME for the executable
+# RM for the program to delete files
+# all: builds your executable
+# clean: deletes all Emacs and Vim temporary files along with the executable
+# oclean: deletes the object files
+# fclean: deletes all Emacs and Vim temporary files, the executable, and the object files
+# re: forces recompilation of all source files
+RE = clean oclean fclean re
+CC = gcc
+SRC = main.c school.c
+OBJ = ${SRC:.c=.o}
+NAME = school
+all: ${OBJ}
+	${CC} -o ${NAME} ${OBJ}
+${OBJ}: m.h
+.PHONY: ${RE}
+clean:
+	-rm -f *~ ${NAME}
+oclean:
+	-rm -f ${OBJ}
+fclean: clean oclean
+re: oclean all
