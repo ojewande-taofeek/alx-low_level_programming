@@ -12,11 +12,14 @@ size_t print_dlistint(const dlistint_t *h)
 
 	current = h;
 
-	while (current != NULL)
+	if (h)
 	{
-		printf("%u\n", current->n);
-		n++;
-		current = current->next;
+		while (current != NULL)
+		{
+			printf("%d\n", current->n);
+			n++;
+			current = current->next;
+		}
 	}
 	return (n);
 }
