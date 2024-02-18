@@ -45,7 +45,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 ### Data Structures
 Please use these data structures for this project:
 
-`/**
+>/**
  * struct hash_node_s - Node of a hash table
  *
  * @key: The key, string
