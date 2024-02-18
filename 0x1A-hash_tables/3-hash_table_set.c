@@ -66,17 +66,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	current = ht->array[index];
 	while (current)
 	{
-		if (strcmp(current->key, key) == 0)
+		if (strcmp(current->value, value) == 0)
 		{
-			if (strcmp(current->value, value) == 0)
-			{
-				free(new_node->key);
-				if (new_node->value != NULL)
-					free(new_node->value);
-				free(new_node);
-				strcpy(current->value, value);
-				return (1);
-			}
+			free(new_node->key);
+			if (new_node->value != NULL)
+				free(new_node->value);
+			free(new_node);
+			free(current->value);
+			current->value = strdup(value);
+			return (1);
 		}
 		current = current->next;
 	}
